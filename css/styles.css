@@ -394,7 +394,12 @@ p {
     .service-card {
         width: 30%;
         margin-right: 3.333%;
+        /* margin-right: 5%; */
+      
     }
+    /* .section-center.clearfix article.service-card:last-child {
+        margin-right: 0;
+    } */
 }
 
 .service-img-container {
