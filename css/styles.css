@@ -453,6 +453,42 @@ p {
     padding-top: 1.25rem;
     color: var(--clr-grey-5);
 }
+.form-group {
+    padding: 1rem 1.5rem;
+}
+.form-control {
+    display: block;
+    /* remember: form-group already has  padding!!! */
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    margin-bottom: 1.25rem;
+    background: var(--clr-grey-10);
+    border-radius: var(--radius);
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+}
+/* not all browsers support inheritance for placeholder so... */
+.form-control::placeholder {
+    font-family: var(--ff-primary);
+    color: var(--clr-grey-1);
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+}
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+}
+@media screen and (min-width: 992px) {
+    .contact-info,
+    .contact-form {
+        float: left;
+        width: 50%;
+    }
+}
 /******* End of Contact Section ********/
 
 
