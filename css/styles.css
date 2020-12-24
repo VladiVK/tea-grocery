@@ -156,6 +156,73 @@ p {
     }
 }
 
+/***** Animation *****/
+@keyframes navbutton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.150);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(-200px);
+        opacity: 0.5;
+    }
+    75% {
+        transform: translateX(50px);
+        opacity: 0.75;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(200px);
+        opacity: 0.5;
+    }
+    75% {
+        transform: translateX(-50px);
+        opacity: 0.75;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+@keyframes show {
+    0% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/***** End of Animation *****/
+
 /***** Navbar *****/
 .nav-btn {
     position: fixed;
@@ -166,6 +233,7 @@ p {
     z-index: 1;
     cursor: pointer;
     /* animation */
+    animation: navbutton 2s  ease infinite;
 }
 .navbar {
     position: fixed;
@@ -233,6 +301,10 @@ p {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url('../images/main-bcg.jpeg') center/cover no-repeat fixed;
     /* animation */
+    /* 
+        another way we will have horizontal scrollbar
+        with big values of translateX()
+    */
     overflow-x: hidden;
 
 }
@@ -249,6 +321,7 @@ p {
     font-family: var(--ff-secondary);
     color: var(--clr-primary);
     /* animation */
+    animation: slideFromRight 5s ease-in-out 1;
 }
 
 .banner h1 {
@@ -257,6 +330,8 @@ p {
     margin-top: 1.25rem;
     margin-bottom: 2rem;
     color: var(--clr-white);
+    /* animation */
+    animation: slideFromLeft 5s ease-in-out 1;
 }
 
 .banner-btn {
@@ -264,6 +339,8 @@ p {
     outline-offset: 0.25rem;
     font-size: 1.25rem;
     padding: 1rem 1.75rem;
+    /* animation */
+    animation: show 5s linear 1;
 }
 
 /***** content devider *****/
